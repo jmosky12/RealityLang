@@ -10,7 +10,7 @@ import UIKit
 import CoreData
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate {
 
 	var window: UIWindow?
 
@@ -18,8 +18,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
 	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 		// Override point for customization after application launch.
 		
+		self.window = UIWindow.init(frame: UIScreen.main.bounds)
 		let cameraVC = CameraViewController()
-		self.window?.rootViewController = cameraVC
+		let navVC = UINavigationController(rootViewController: cameraVC)
+		navVC.navigationBar.barTintColor = UIColor.white
+		navVC.navigationBar.tintColor = UIColor.black
+		navVC.navigationBar.titleTextAttributes = [ NSAttributedStringKey.font: UIFont(name: "Avenir Book", size: 20)!]
+//		navVC.navigationBar.isTranslucent = false
+//		navVC.navigationBar.setBackgroundImage(UIImage(), for: .default)
+//		navVC.navigationBar.shadowImage = UIImage()
+		self.window?.rootViewController = navVC
 		self.window?.makeKeyAndVisible()
 		
 		return true
@@ -49,17 +57,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
 		self.saveContext()
 	}
 
-	// MARK: - Split view
-
-//	func splitViewController(_ splitViewController: UISplitViewController, collapseSecondary secondaryViewController:UIViewController, onto primaryViewController:UIViewController) -> Bool {
-//	    guard let secondaryAsNavController = secondaryViewController as? UINavigationController else { return false }
-//	    guard let topAsDetailController = secondaryAsNavController.topViewController as? DetailViewController else { return false }
-//	    if topAsDetailController.detailItem == nil {
-//	        // Return true to indicate that we have handled the collapse by doing nothing; the secondary controller will be discarded.
-//	        return true
-//	    }
-//	    return false
-//	}
 	// MARK: - Core Data stack
 
 	lazy var persistentContainer: NSPersistentContainer = {

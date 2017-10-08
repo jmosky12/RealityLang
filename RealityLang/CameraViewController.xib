@@ -1,13 +1,28 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13142" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12042"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Avenir.ttc">
+            <string>Avenir-Book</string>
+        </array>
+    </customFonts>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CameraViewController" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CameraViewController" customModule="RealityLang" customModuleProvider="target">
             <connections>
+                <outlet property="cancelButton" destination="vn4-qM-Wun" id="K36-bc-Lo4"/>
+                <outlet property="cancelLayer" destination="MCc-IF-UfG" id="kYw-no-KYw"/>
+                <outlet property="noPhotoLabel" destination="quE-aN-sUU" id="q5U-yK-gHa"/>
+                <outlet property="photoContainerView" destination="mG6-JV-AGy" id="O3I-bs-Hfe"/>
+                <outlet property="photoImageView" destination="Y8W-3A-vDs" id="ss8-aS-0AI"/>
+                <outlet property="takePhotoButton" destination="sb0-Ag-jnK" id="PCp-pE-VcQ"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -15,8 +30,95 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mG6-JV-AGy">
+                    <rect key="frame" x="20" y="36" width="335" height="525"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Take a photo and learn what it means" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="quE-aN-sUU">
+                            <rect key="frame" x="0.0" y="0.0" width="335" height="525"/>
+                            <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="30"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Y8W-3A-vDs">
+                            <rect key="frame" x="0.0" y="39" width="335" height="447.5"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="Y8W-3A-vDs" secondAttribute="height" multiplier="3:4" id="tVO-lC-uMH"/>
+                            </constraints>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="Y8W-3A-vDs" secondAttribute="trailing" id="E4V-Yw-Sce"/>
+                        <constraint firstAttribute="bottom" secondItem="quE-aN-sUU" secondAttribute="bottom" id="IWx-0M-J90"/>
+                        <constraint firstItem="quE-aN-sUU" firstAttribute="leading" secondItem="mG6-JV-AGy" secondAttribute="leading" id="MdJ-4A-HVz"/>
+                        <constraint firstAttribute="trailing" secondItem="quE-aN-sUU" secondAttribute="trailing" id="Rdl-Pw-Wmf"/>
+                        <constraint firstItem="quE-aN-sUU" firstAttribute="top" secondItem="mG6-JV-AGy" secondAttribute="top" id="lLQ-Ja-wIp"/>
+                        <constraint firstItem="Y8W-3A-vDs" firstAttribute="centerY" secondItem="mG6-JV-AGy" secondAttribute="centerY" id="pY8-kd-bKP"/>
+                        <constraint firstItem="Y8W-3A-vDs" firstAttribute="leading" secondItem="mG6-JV-AGy" secondAttribute="leading" id="wB5-jX-9rk"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vn4-qM-Wun">
+                    <rect key="frame" x="315" y="55" width="60" height="60"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MCc-IF-UfG">
+                            <rect key="frame" x="25" y="5" width="30" height="30"/>
+                            <subviews>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cancel-button" translatesAutoresizingMaskIntoConstraints="NO" id="TDI-7T-e15">
+                                    <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
+                                </imageView>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstItem="TDI-7T-e15" firstAttribute="leading" secondItem="MCc-IF-UfG" secondAttribute="leading" id="2bt-zH-pKN"/>
+                                <constraint firstAttribute="height" constant="30" id="8WE-Fe-56M"/>
+                                <constraint firstAttribute="width" constant="30" id="Avg-sH-ywT"/>
+                                <constraint firstAttribute="width" constant="30" id="Ha8-ny-YXV"/>
+                                <constraint firstAttribute="trailing" secondItem="TDI-7T-e15" secondAttribute="trailing" id="afP-Rm-KPe"/>
+                                <constraint firstAttribute="bottom" secondItem="TDI-7T-e15" secondAttribute="bottom" id="g1I-NF-APX"/>
+                                <constraint firstItem="TDI-7T-e15" firstAttribute="top" secondItem="MCc-IF-UfG" secondAttribute="top" id="l3N-VI-pOf"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="60" id="ILb-zT-Mj4"/>
+                        <constraint firstAttribute="trailing" secondItem="MCc-IF-UfG" secondAttribute="trailing" constant="5" id="cqP-eR-1t7"/>
+                        <constraint firstItem="MCc-IF-UfG" firstAttribute="top" secondItem="vn4-qM-Wun" secondAttribute="top" constant="5" id="q8T-h4-Yt9"/>
+                        <constraint firstAttribute="height" constant="60" id="zdW-YY-4tb"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sb0-Ag-jnK">
+                    <rect key="frame" x="87" y="577" width="200" height="60"/>
+                    <color key="backgroundColor" red="0.8784313725490196" green="0.92549019607843142" blue="0.9882352941176471" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="poh-QO-aYA"/>
+                        <constraint firstAttribute="width" constant="200" id="qVV-i3-pLu"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="20"/>
+                    <state key="normal" title="Take Photo">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="openCameraButton:" destination="-1" eventType="touchUpInside" id="j8H-td-VQC"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="vn4-qM-Wun" firstAttribute="top" secondItem="Y8W-3A-vDs" secondAttribute="top" constant="-20" id="16x-Eg-zHm"/>
+                <constraint firstItem="vn4-qM-Wun" firstAttribute="trailing" secondItem="Y8W-3A-vDs" secondAttribute="trailing" constant="20" id="AWs-k9-TOJ"/>
+                <constraint firstItem="sb0-Ag-jnK" firstAttribute="centerX" secondItem="mG6-JV-AGy" secondAttribute="centerX" id="Jye-Fp-mNs"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="mG6-JV-AGy" secondAttribute="trailing" constant="20" id="NwV-ER-xs3"/>
+                <constraint firstItem="mG6-JV-AGy" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="hFI-uR-rBC"/>
+                <constraint firstItem="sb0-Ag-jnK" firstAttribute="top" secondItem="mG6-JV-AGy" secondAttribute="bottom" constant="16" id="oa3-fd-Coc"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="sb0-Ag-jnK" secondAttribute="bottom" constant="30" id="r2c-Sm-SUQ"/>
+                <constraint firstItem="mG6-JV-AGy" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="16" id="sKc-QO-3CO"/>
+            </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="33.5" y="107.5"/>
         </view>
     </objects>
+    <resources>
+        <image name="cancel-button" width="64" height="64"/>
+    </resources>
 </document>

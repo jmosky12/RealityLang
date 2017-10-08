@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Avenir.ttc">
+            <string>Avenir-Book</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CardViewController" customModule="RealityLang" customModuleProvider="target">
+            <connections>
+                <outlet property="photoImageView" destination="SZl-LW-H43" id="xXk-cY-dM3"/>
+                <outlet property="phraseLabel" destination="jjB-nY-wgV" id="UuM-P6-vYZ"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="AQj-zQ-r1r"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="555"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="SZl-LW-H43">
+                    <rect key="frame" x="8" y="28" width="359" height="478.5"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="SZl-LW-H43" secondAttribute="height" multiplier="3:4" id="sUS-YB-FhZ"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jjB-nY-wgV">
+                    <rect key="frame" x="8" y="522.5" width="359" height="16.5"/>
+                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="20"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="jjB-nY-wgV" firstAttribute="leading" secondItem="SZl-LW-H43" secondAttribute="leading" id="7Ze-zi-pbL"/>
+                <constraint firstItem="jjB-nY-wgV" firstAttribute="top" secondItem="SZl-LW-H43" secondAttribute="bottom" constant="16" id="8cV-2z-NnV"/>
+                <constraint firstItem="SZl-LW-H43" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="8" id="TIy-qc-ipM"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="jjB-nY-wgV" secondAttribute="bottom" constant="16" id="b8T-DF-P1G"/>
+                <constraint firstItem="jjB-nY-wgV" firstAttribute="trailing" secondItem="SZl-LW-H43" secondAttribute="trailing" id="fp1-PT-fdC"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="SZl-LW-H43" secondAttribute="trailing" constant="8" id="ptS-RH-fpG"/>
+                <constraint firstItem="SZl-LW-H43" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="8" id="tM2-J3-MZo"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="35.5" y="13.5"/>
+        </view>
+    </objects>
+</document>

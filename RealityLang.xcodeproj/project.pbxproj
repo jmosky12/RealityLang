@@ -13,10 +13,10 @@
 		DF90A9761F89D0F9000B2EC4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF90A9741F89D0F9000B2EC4 /* LaunchScreen.storyboard */; };
 		DF90A97F1F89D18F000B2EC4 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF90A97D1F89D18F000B2EC4 /* CameraViewController.swift */; };
 		DF90A9801F89D18F000B2EC4 /* CameraViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF90A97E1F89D18F000B2EC4 /* CameraViewController.xib */; };
-		DF90A9831F89D1FA000B2EC4 /* FlashcardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF90A9811F89D1FA000B2EC4 /* FlashcardViewController.swift */; };
-		DF90A9841F89D1FA000B2EC4 /* FlashcardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF90A9821F89D1FA000B2EC4 /* FlashcardViewController.xib */; };
-		DF90A9871F89D223000B2EC4 /* CardCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF90A9851F89D223000B2EC4 /* CardCollectionViewController.swift */; };
-		DF90A9881F89D223000B2EC4 /* CardCollectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF90A9861F89D223000B2EC4 /* CardCollectionViewController.xib */; };
+		DF90A9831F89D1FA000B2EC4 /* CardCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF90A9811F89D1FA000B2EC4 /* CardCollectionViewController.swift */; };
+		DF90A9841F89D1FA000B2EC4 /* CardCollectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF90A9821F89D1FA000B2EC4 /* CardCollectionViewController.xib */; };
+		DF90A9871F89D223000B2EC4 /* CardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF90A9851F89D223000B2EC4 /* CardViewController.swift */; };
+		DF90A9881F89D223000B2EC4 /* CardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF90A9861F89D223000B2EC4 /* CardViewController.xib */; };
 		DF90A98A1F89D233000B2EC4 /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF90A9891F89D233000B2EC4 /* Storage.swift */; };
 /* End PBXBuildFile section */
 
@@ -29,10 +29,10 @@
 		DF90A9771F89D0F9000B2EC4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DF90A97D1F89D18F000B2EC4 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		DF90A97E1F89D18F000B2EC4 /* CameraViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CameraViewController.xib; sourceTree = "<group>"; };
-		DF90A9811F89D1FA000B2EC4 /* FlashcardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashcardViewController.swift; sourceTree = "<group>"; };
-		DF90A9821F89D1FA000B2EC4 /* FlashcardViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FlashcardViewController.xib; sourceTree = "<group>"; };
-		DF90A9851F89D223000B2EC4 /* CardCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCollectionViewController.swift; sourceTree = "<group>"; };
-		DF90A9861F89D223000B2EC4 /* CardCollectionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardCollectionViewController.xib; sourceTree = "<group>"; };
+		DF90A9811F89D1FA000B2EC4 /* CardCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCollectionViewController.swift; sourceTree = "<group>"; };
+		DF90A9821F89D1FA000B2EC4 /* CardCollectionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardCollectionViewController.xib; sourceTree = "<group>"; };
+		DF90A9851F89D223000B2EC4 /* CardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewController.swift; sourceTree = "<group>"; };
+		DF90A9861F89D223000B2EC4 /* CardViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardViewController.xib; sourceTree = "<group>"; };
 		DF90A9891F89D233000B2EC4 /* Storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -73,10 +73,10 @@
 				DF90A9681F89D0F8000B2EC4 /* RealityLang.xcdatamodeld */,
 				DF90A97D1F89D18F000B2EC4 /* CameraViewController.swift */,
 				DF90A97E1F89D18F000B2EC4 /* CameraViewController.xib */,
-				DF90A9811F89D1FA000B2EC4 /* FlashcardViewController.swift */,
-				DF90A9821F89D1FA000B2EC4 /* FlashcardViewController.xib */,
-				DF90A9851F89D223000B2EC4 /* CardCollectionViewController.swift */,
-				DF90A9861F89D223000B2EC4 /* CardCollectionViewController.xib */,
+				DF90A9811F89D1FA000B2EC4 /* CardCollectionViewController.swift */,
+				DF90A9821F89D1FA000B2EC4 /* CardCollectionViewController.xib */,
+				DF90A9851F89D223000B2EC4 /* CardViewController.swift */,
+				DF90A9861F89D223000B2EC4 /* CardViewController.xib */,
 				DF90A9891F89D233000B2EC4 /* Storage.swift */,
 			);
 			path = RealityLang;
@@ -144,8 +144,8 @@
 				DF90A9801F89D18F000B2EC4 /* CameraViewController.xib in Resources */,
 				DF90A9761F89D0F9000B2EC4 /* LaunchScreen.storyboard in Resources */,
 				DF90A9731F89D0F9000B2EC4 /* Assets.xcassets in Resources */,
-				DF90A9841F89D1FA000B2EC4 /* FlashcardViewController.xib in Resources */,
-				DF90A9881F89D223000B2EC4 /* CardCollectionViewController.xib in Resources */,
+				DF90A9841F89D1FA000B2EC4 /* CardCollectionViewController.xib in Resources */,
+				DF90A9881F89D223000B2EC4 /* CardViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -159,8 +159,8 @@
 				DF90A96A1F89D0F8000B2EC4 /* RealityLang.xcdatamodeld in Sources */,
 				DF90A9671F89D0F8000B2EC4 /* AppDelegate.swift in Sources */,
 				DF90A97F1F89D18F000B2EC4 /* CameraViewController.swift in Sources */,
-				DF90A9871F89D223000B2EC4 /* CardCollectionViewController.swift in Sources */,
-				DF90A9831F89D1FA000B2EC4 /* FlashcardViewController.swift in Sources */,
+				DF90A9871F89D223000B2EC4 /* CardViewController.swift in Sources */,
+				DF90A9831F89D1FA000B2EC4 /* CardCollectionViewController.swift in Sources */,
 				DF90A98A1F89D233000B2EC4 /* Storage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
